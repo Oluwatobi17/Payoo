@@ -182,6 +182,9 @@ marquee img{
 .about_container .infos2 div h4{
 	margin-bottom: 1px;
 }
+ul{
+	padding-left: 20px;
+}
 .about_container .infos2 div h5{
 	margin-bottom: 0px;
 	display: flex;
