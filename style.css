@@ -226,7 +226,10 @@ ul{
     border-radius: 0.4rem;
     cursor: pointer;
     text-align: center;
-    width: 150px;
+    width: 180px;
+}
+.apply_form p{
+	color: #3db5ef;
 }
 .about_container .infos img{
 	height: 20px;
