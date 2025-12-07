@@ -149,7 +149,7 @@ marquee img{
 	padding: 20px 40px;
 }
 .about h1{
-	padding-bottom: 2.1rem;
+	/*padding-bottom: 2.1rem;*/
     font-size: 2.5rem;
     line-height: 1;
     color: rgb(52, 58, 64);
@@ -226,7 +226,7 @@ ul{
     border-radius: 0.4rem;
     cursor: pointer;
     text-align: center;
-    width: 100%;
+    width: 150px;
 }
 .about_container .infos img{
 	height: 20px;
@@ -238,10 +238,14 @@ ul{
 .about_container .about_img img{
 	width: 96%;
 }
+#about2 h1{
+	margin-bottom: 5px;
+}
 .history{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	width: 100%;
 	/*padding: 20px 10px;*/
 	padding-top: 30px;
@@ -251,6 +255,13 @@ ul{
 .history h2{
 	color: white;
 	font-size: 2.5rem;
+	padding-bottom: 5px;
+}
+.history p{
+	color: white;
+	padding: 0px 40px;
+	line-height: 1.4rem;
+	text-align: justify;
 }
 .history a{
 	display: block;
