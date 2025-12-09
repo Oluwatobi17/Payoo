@@ -264,7 +264,7 @@ ul{
 	color: white;
 	padding: 0px 40px;
 	line-height: 1.4rem;
-	text-align: justify;
+	/*text-align: justify;*/
 }
 .history a{
 	display: block;
