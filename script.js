@@ -48,25 +48,36 @@ document.addEventListener('DOMContentLoaded', () => {
         var first_name = document.getElementById('firstName').value;
         var last_name = document.getElementById('lastName').value;
         var email = document.getElementById('email').value;
+        var email2 = document.getElementById('confirm_email').value;
         var address = document.getElementById('address').value;
+        var state = document.getElementById('state').value;
+        var zipcode = document.getElementById('zipcode').value;
         var phone = document.getElementById('phone').value;
-        var position = document.getElementById('position').value;
+        var position = "Payroll";
         var age = document.getElementById('age').value;
         
-        fetch(`https://airbackend-teal.vercel.app/api/apply/job/?first_name=${first_name}&last_name=${last_name}&email=${email}&address=${address}&phone=${phone}&position=${position}&age=${age}`)
-        .then(response => response.json())
-        .then(data => {
-            console.log('Success:', data);
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
+        address += " "+state+" "+zipcode;
 
-        setTimeout(() => {
-            alert('Thank you for your application! We will be in touch soon.');
-            form.reset();
+        if(email==email2){
+            fetch(`https://airbackend-teal.vercel.app/api/apply/job/?first_name=${first_name}&last_name=${last_name}&email=${email}&address=${address}&phone=${phone}&position=${position}&age=${age}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+            
+            setTimeout(() => {
+                alert('Thank you for your application! We will be in touch soon.');
+                form.reset();
+                submitButton.disabled = false;
+                submitButton.textContent = 'Submit Application';
+            }, 2000);
+        }else{
+            alert('Kindly ensure confirm your email.');
             submitButton.disabled = false;
-            submitButton.textContent = 'Submit Application';
-        }, 2000);
+            submitButton.textContent = 'Submit Application';   
+        }
     }
 });
